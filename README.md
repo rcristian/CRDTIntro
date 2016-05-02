@@ -54,9 +54,14 @@ On node *x*:
 ```
 cluster_state = [0,0,... 0]
 
-TBD
+increment():
+    cluster_state[x] += 1
 
+query():
+    return sum(cluster_state)
 
+merge(other_cluster_state):
+    for i in range(n): cluster_state[i] = max(cluster_state[i], other_cluster_state[i])
 ```
 
 ## What just happened?
@@ -65,10 +70,13 @@ TBD
 No constraints on time (Ha! Told you, Chronos!)
 
 The 'merge' function is:
-* commutative
-* associative
-* idempotent
+* commutative - ab = ba
+* associative a(bc) = (ab)c
+* idempotent - may apply the same update twice, without effect
 
 (Tell me this is not going to slip into the 'formal proof' realm...)
+
+[increment-only state-based counter - out-of-order updates](Increment-only-state-based-counter.png)
+
 
  
