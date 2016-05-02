@@ -199,6 +199,8 @@ Basho (developers of Riak) has a good collection of articles about CRDTs and oth
 
 ## Thanks
 
+the wizards behind CRDTs;
+
 the guys at [codecamp.ro](http://codecamp.ro/) for making me invest time in this presentation.
 
 
