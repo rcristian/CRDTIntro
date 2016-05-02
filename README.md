@@ -38,7 +38,7 @@ Example: Vector Clocks to detect concurrent updates on replicas
 
 Conflicts are possible! (deal with it manually, or LWW...)
 
-Consistency needs formal proof - it's something that you need to 'rely on', not 'take care of it later'.
+Consistency needs formal proof - it's something that you need to 'rely on', not 'take care of it later'. You just can't debug 1000 threads and not live for a while on coke and pizza.
 
 ## CRDTs - what are they
 
