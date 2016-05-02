@@ -42,7 +42,7 @@ Consistency needs formal proof - it's something that you need to 'rely on', not 
 
 Side story: [CFR's](https://en.wikipedia.org/wiki/C%C4%83ile_Ferate_Rom%C3%A2ne) rule #1: "if it smells like incident, stop the presses! like, all of it" - but dam' its slow. 
 
-## CRDTs - what are they
+## CRDTs - what's that?
 
 Specially designed data structures to achieve eventual strong consistency between replicas.
 
