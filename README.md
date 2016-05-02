@@ -38,6 +38,8 @@ Example: Vector Clocks to detect concurrent updates on replicas
 
 Conflicts are possible! (deal with it manually, or LWW...)
 
+Consistency needs formal proof - it's something that you need to 'rely on', not 'take care of it later'.
+
 ## CRDTs - what are they
 
 Specially designed data structures to achieve eventual strong consistency between replicas.
