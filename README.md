@@ -76,7 +76,7 @@ The 'merge' function is:
 
 (Tell me this is not going to slip into the 'formal proof' realm...)
 
-[increment-only state-based counter - out-of-order updates](Increment-only-state-based-counter.png)
+![increment-only state-based counter - out-of-order updates](Increment-only-state-based-counter.png)
 
 
  
