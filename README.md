@@ -6,7 +6,7 @@ aka Conflict-Free Replicated Data Types
 
 A practical way (CRDTs) of reasoning about consistency
 
-Goal: give you a key to (one) of the 1000's doors in the consistency kingdom; *a DYI formula* in the realm of consistency models
+Goal: give you a key to (one of) the 1000's doors in the consistency kingdom; *a DYI formula* in the realm of consistency models
 
 ## Why consistency models are important
 
