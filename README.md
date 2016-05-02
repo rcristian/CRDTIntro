@@ -45,7 +45,7 @@ What do we sacrifice? "Specially designed data structures and special operations
 ## Simplest example - Increment-only counter, state-based
 ---
 
-We'll define the terms above a bit later
+We'll define *increment-only* and *state-based* a bit later
 
 Assume *n* replicas and a particular node with index *x* (thus *0 <= x <= n-1*)
 
