@@ -183,6 +183,8 @@ Sets
 
 Graphs
 
+..and most important: Invent your own! Because now you can.
+
 ## References
 
 [A comprehensive study of CRDTs](http://hal.upmc.fr/inria-00555588/document)
