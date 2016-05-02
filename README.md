@@ -173,11 +173,23 @@ For an op-based solution it is straight forward.
 
 ## Known CRDTs
 
-TBD
+Counters
+
+Registers
+
+Sets
+
+Graphs
 
 ## References
 
 [A comprehensive study of CRDTs](http://hal.upmc.fr/inria-00555588/document)
+
+Full of alien math signs, but it has all the algorithms!
+
+Basho (developers of Riak) has a good collection of articles about CRDTs and other interesting 'distributed data' stuff; you can start browsing [here](https://docs.basho.com/riak/kv/2.1.4/learn/concepts/crdts/)
+
+[The gist of this talk @ github](https://github.com/rcristian/CRDTIntro)
 
 
 
