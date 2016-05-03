@@ -114,11 +114,12 @@ value_on_x = 0
 increment():
     value_on_x += 1
 
+    send_update():
+        send '+1' to replicas (1..n) - x
+
 query():
     return value_on_x
 
-send_update():
-    send '+1' to replicas (1..n) - x
 ```
 
 The above data structure is a CmRDT (Cm = 'Commutative')
@@ -150,14 +151,17 @@ add(e):
     unique_op_id = unique()
     set_on_x += (unique_op_id, e)
 
-send_add():
-    send '+ (unique_op_id, e)'
+    send_add():
+        send '+ (unique_op_id, e)'
 
 remove(e):
     if (unique_op_id, e) in set_on_x then set_on_x -= (unique_op_id, e)
 
-send_remove():
-    send 'remove (unique_op_id, e)'
+    send_remove():
+        send 'remove (unique_op_id, e)'
+
+query(e):
+    return true if (_, e) in set_on_x 
 ```
 
 Why do we need the unique() thing? Because without it, concurrent add() and remove() or combinations won't commute.
