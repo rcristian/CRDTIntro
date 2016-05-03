@@ -40,7 +40,7 @@ Conflicts are possible! (deal with it manually, or LWW...)
 
 Consistency needs formal proof - it's something that you need to 'rely on', not 'take care of it later'. You just can't debug 1000 threads and live for a while on coke and pizza.
 
-Side story: [CFR's](https://en.wikipedia.org/wiki/C%C4%83ile_Ferate_Rom%C3%A2ne) rule #1: "if it smells like incident, stop the presses! like, all of it" - but dam' its slow. 
+Safest: stop the world! but - it's hard and makes things really slow.
 
 ## CRDTs - what's that?
 
@@ -197,11 +197,6 @@ Basho (developers of Riak) has a good collection of articles about CRDTs and oth
 
 [The gist of this talk @ github](https://github.com/rcristian/CRDTIntro)
 
-## Thanks
-
-the wizards behind CRDTs;
-
-the guys at [codecamp.ro](http://codecamp.ro/) for making me invest time in this presentation.
 
 
 
