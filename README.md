@@ -49,7 +49,7 @@ Consistency needs formal proof - it's something that you need to 'rely on', not 
 
 ## CRDTs - what's that?
 
-Specially designed data structures to achieve eventual strong consistency between replicas.
+Data structures crafted to achieve eventual strong consistency between replicas.
 
 Replication is important for scalability:
 * fault-tolerance
@@ -182,7 +182,7 @@ For a state-based solution to get a counter that can also go down, keep two incr
 
 When querying for the value, return the difference.
 
-For an op-based solution it is straight forward.
+For an op-based solution it is straightforward.
 
 ## Known CRDTs
 
@@ -214,7 +214,7 @@ For an op-based solution it is straight forward.
 
 ..and most important: Invent your own! Because now you can.
 
-## Usecases
+## Use cases
 
 * Counters - ad serving counts, likes
 * Sets - followers, likes (again)
