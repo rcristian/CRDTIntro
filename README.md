@@ -181,13 +181,15 @@ For an op-based solution it is straight forward.
 
 ## Known CRDTs
 
-Counters
+Counters - G(row only), P(ositive)N(egative)
 
-Registers
+Registers - L(ast)W(riter)W(ins), M(ulti)V(value)
 
-Sets
+Sets - G(row only), 2P(hase), LWW-element, PN, O(bserved)R(emove)
 
-Graphs
+Graphs - Add-only monotonic DAG, Add-Remove Partial Order data type
+
+Co-operative text editing
 
 ..and most important: Invent your own! Because now you can.
 
