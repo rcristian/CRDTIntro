@@ -20,6 +20,8 @@ So there's a scale: from 'none' via 'weak', to 'strong'.
 
 NB: consistency models are built in the 3rd party services you love and advocate (e.g. 'transaction isolation').
 
+When it comes to distributed systems & consistency, the sky is not the limit: the CAP Theorem is.
+
 ## Types of consistency
 
 Strong - 'all parties see the same thing at all times' - lot of locking, slow (damn you Chronos, master of all time!) NB: *your* time is different than *mine*
@@ -38,9 +40,12 @@ Example: Vector Clocks to detect concurrent updates on replicas
 
 Conflicts are possible! (deal with it manually, or LWW...)
 
-Consistency needs formal proof - it's something that you need to 'rely on', not 'take care of it later'. You just can't debug 1000 threads and live for a while on coke and pizza.
+*Semantic Resolution* - the business logic knows how to deal with conflicts, delegate to it to arbitrate.
 
 Safest: stop the world! but - it's hard and makes things really slow.
+
+Consistency needs formal proof - it's something that you need to 'rely on', not 'take care of it later'. You just can't debug 1000 threads and live for a while on coke and pizza.
+
 
 ## CRDTs - what's that?
 
@@ -53,9 +58,11 @@ Replication is important for scalability:
 
 Strong eventual consistency = two replicas that received the same set of updates will be in the same state - no conflicts possible, no rollbacks needed
 
-Goal: Eliminate rollbacks, reconciliation
+Goal: Eliminate rollbacks, reconciliation - offer a deterministic way to move forward, no matter the number of conflicts.
 
 What do we sacrifice? "Specially designed data structures and special operations on them"
+
+Claims to offer a solution to the CAP problem.
 
 ## Simplest example - Increment-only counter, state-based
 
@@ -190,6 +197,22 @@ Graphs - Add-only monotonic DAG, Add-Remove Partial Order data type
 Co-operative text editing
 
 ..and most important: Invent your own! Because now you can.
+
+## Usecases
+
+* Counters - ad serving counts, likes
+* Sets - followers, likes (again)
+* Shopping carts (OR-Set)
+
+If your use case is simple enough, you can 'roll your own' or use existing libraries.
+
+Some are built-in Riak.
+
+## Downsides
+
+They're still complex, especially graphs.
+
+Garbage collection (data tends to grow) might require synchronization.
 
 ## References
 
