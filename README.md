@@ -186,15 +186,31 @@ For an op-based solution it is straight forward.
 
 ## Known CRDTs
 
-Counters - G(row only), P(ositive)N(egative)
+### Counters
 
-Registers - L(ast)W(riter)W(ins), M(ulti)V(value)
+* G(row only)
+* P(ositive)N(egative)
 
-Sets - G(row only), 2P(hase), LWW-element, PN, O(bserved)R(emove)
+### Registers
 
-Graphs - Add-only monotonic DAG, Add-Remove Partial Order data type
+* L(ast)W(riter)W(ins) - uses timestamps to order operations
+* M(ulti)V(value) - keep conflicting values together, 'will fix later'
 
-Co-operative text editing
+### Sets 
+
+* G(row only) - no remove, ever
+* 2P(hase) - similar to PN Counter, keep lists for removed elements (tombstones)
+* U(nique) - each element has a unique identity
+* LWW-element - timestamp based
+* PN - associate with each element a counter that goes up when an element is added, goes down when removed; the element is in the set if the counter is positive
+* O(bserved)R(emove)
+
+### Graphs 
+
+* Add-only monotonic DAG
+* Add-Remove Partial Order data type
+
+..and Co-operative text editing
 
 ..and most important: Invent your own! Because now you can.
 
