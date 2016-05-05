@@ -4,7 +4,7 @@ aka Conflict-Free Replicated Data Types
 
 ## Agenda
 
-A practical way (CRDTs) of reasoning about consistency
+A practical way (CRDTs) of reasoning about consistency in distributed systems
 
 Goal: give you a key to (one of) the 1000's doors in the consistency kingdom; *a DIY formula* in the realm of consistency models
 
