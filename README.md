@@ -85,8 +85,6 @@ send_update():
 
 ## State-based rules
 
-No constraints on time (Ha! Told you, Chronos!)
-
 Note how the state on node *x* increases monotonically, and;
 
 the 'merge' function is:
