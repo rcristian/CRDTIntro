@@ -2,17 +2,11 @@
 
 aka Conflict-Free Replicated Data Types
 
-## Agenda
-
-A practical way (CRDTs) of reasoning about consistency in the realm of distributed systems.
-
-Goal: give you a key to (one of) the 1000's doors in the consistency kingdom; *a DIY formula* in the realm of consistency models.
-
 ## Why consistency models are important
 
 What is the consistency model of your newly designed system / component?
 
-Most of you will shrug their shoulders. As an afterthought: 
+As an afterthought: 
 
 "I wanted it to be 'strong' [..ly consistent], and I had to battle the 'weak' [consistency]".
 
